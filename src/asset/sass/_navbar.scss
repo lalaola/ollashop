@@ -1,7 +1,17 @@
-.navbar{
-    .menu a{
+.navbar {
+    .menu a {
         text-decoration: none;
         color: black;
         font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 968px) {
+    .navbar {
+        .menu a {
+            font-size: 14px;
+            font-weight: 400;
+
+        }
     }
 }

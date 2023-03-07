@@ -13,12 +13,12 @@ const Listproduct = () => {
     return (
         <div className='list-product col-10 mx-auto mt-4'>
             <h3>Product for you !</h3>
-            <div className="wrap-product mt-4">
+            <div className="wrap-product mt-4 d-flex flex-wrap ">
             {
                     getProduct ?
                         getProduct.map((order, index) => {
                             return (
-                                <Card title={order.name} image={order.images[0].src} price={order.price} />
+                                <Card key={index} title={order.name} image={order.images[0].src} price={order.price} />
                             );
                         })
                         : getProductLoading ? <p>Loading</p> : <p>Data tidak tersedia</p>

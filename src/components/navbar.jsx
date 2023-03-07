@@ -4,7 +4,7 @@ import logo from '../asset/image/logo.png'
 const Navbar = () => {
     return (
         <div className='navbar col-10 mx-auto d-flex justify-content-between'>
-            <div className="icon col-2">
+            <div className="icon col-4 col-md-2">
                 <img className='img-fluid' src={logo} alt="logo shop" />
             </div>
             <div className="menu">

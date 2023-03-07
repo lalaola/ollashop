@@ -28,3 +28,23 @@
         }
     }
 }
+
+@media only screen and (max-width: 968px) {
+    .homepage{
+        .hero{
+            margin-top: 1rem;
+            flex-direction: column-reverse;
+            .text{
+                h1{
+                font-size: 48px;
+                }
+                h3{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

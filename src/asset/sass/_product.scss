@@ -4,10 +4,9 @@
         background: linear-gradient(89.77deg, #14B8EC 28.87%, rgba(27, 200, 255, 0) 98.54%);
         display: flex;
     }
-    .wrap-product {
-        display: grid;
-        grid-template-columns: repeat(4,250px);
-        column-gap: 1rem;
+    .card.mb-3.mx-1 {
+        width: 24%;
+        cursor: pointer;
     }
     .text {
         color: white;
@@ -31,3 +30,33 @@
         align-self: flex-end;
     }
 }
+
+@media only screen and (max-width: 568px) {
+    .product {
+        .card.mb-3.mx-1 {
+            width: 47%;
+            p.card-text {
+                font-size: 12px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 968px) {
+    .product {
+        .wrap-product{
+            justify-content: space-between;
+        }
+        .card.mb-3.mx-1 {
+            width: 47%;
+        }
+        .text {
+            h1 {
+                font-size: 70px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
