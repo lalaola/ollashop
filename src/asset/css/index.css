@@ -1,7 +1,7 @@
 /* Define standard variables and values for website */
 @import url("https://fonts.googleapis.com/css2?family=Lateef:wght@200&display=swap");
 .homepage {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(269.28deg, #ABEBFF 0.64%, rgba(184, 251, 255, 0.91) 31.05%, #FDFFFF 72.58%);
 }
 .homepage .hero .text h3 {
