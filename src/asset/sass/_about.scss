@@ -1,0 +1,116 @@
+.about {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &__content {
+        width: 100vw;
+
+        .isi-about {
+            min-height: 100vh;
+            z-index: 1;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                color: $yellow;
+            }
+
+            p {
+                font-size: 22px;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        .img-bg {
+            position: relative;
+            height: 100vh;
+            z-index: 0;
+            overflow: hidden;
+
+            .toggle {
+                position: absolute;
+                right: 0;
+                top: 1rem;
+            }
+
+            .foto {
+                height: 100vh;
+
+                .col-12 {
+                    height: 100%;
+                }
+            }
+
+            .spiral {
+                position: absolute;
+                bottom: -1rem;
+            }
+
+            .matahari {
+                position: absolute;
+                right: 0;
+                top: 7rem;
+            }
+
+            .pelangi {
+                position: absolute;
+                left: 0;
+            }
+
+            .abstrak {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .warning {
+        background-color: black;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        h3 {
+            color: white;
+        }
+
+    }
+}
+
+
+// mobile 
+
+@media only screen and (max-width: 768px) {
+    .about {
+        .isi-about {
+            flex-direction: column-reverse;
+
+            p {
+                font-size: 18px;
+            }
+
+            .foto {
+                height: 50vh;
+                margin-top: -2rem;
+            }
+
+            .text {
+                margin-top: -2rem;
+            }
+        }
+    }
+}
