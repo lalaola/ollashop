@@ -1,31 +1,30 @@
-.home {
-    height: 100vh;
-
-    &__h1Header {
-        font-family: 'Lateef', 'serif';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 60px;
-        line-height: 87px;
-        letter-spacing: 0.06em;
-        color: $textGrey ;
-    }
-
-    &__h1Footer {
-        font-family: 'Jura';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 52px;
-        line-height: 73px;
-        letter-spacing: 0.03em;
-        color: #FFFFFF;
-        text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.33);
-    }
-}
-
 .homepage {
-    overflow: hidden;
-    width: 100vw;
-    background: linear-gradient(119.18deg, #F34F4F 0.65%, #F29322 55.01%, #FFFFFF 103.99%, rgba(152, 98, 58, 0) 103.99%);
-    background-blend-mode: color-dodge;
+    height: 100vh;
+    background: linear-gradient(269.28deg, #ABEBFF 0.64%, rgba(184, 251, 255, 0.91) 31.05%, #FDFFFF 72.58%);
+
+    .hero { 
+       .text {
+            h3 {
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 47px;
+                letter-spacing: 0.06em;
+                color: #2C99FE;
+            }
+
+            h1 {
+                font-weight: 500;
+                font-size: 68px;
+                line-height: 68px;
+                letter-spacing: 0.03em;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 31px;
+                letter-spacing: 0.03em;
+            }
+        }
+    }
 }

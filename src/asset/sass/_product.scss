@@ -1,0 +1,33 @@
+.product {
+    .banner-product {
+        height: 40vh;
+        background: linear-gradient(89.77deg, #14B8EC 28.87%, rgba(27, 200, 255, 0) 98.54%);
+        display: flex;
+    }
+    .wrap-product {
+        display: grid;
+        grid-template-columns: repeat(4,250px);
+        column-gap: 1rem;
+    }
+    .text {
+        color: white;
+        align-self: center;
+
+        h1 {
+            font-weight: 700;
+            font-size: 108px;
+            letter-spacing: 0.06em;
+            line-height: 71px;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 30px;
+            letter-spacing: 0.06em;
+        }
+    }
+
+    .foto {
+        align-self: flex-end;
+    }
+}

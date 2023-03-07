@@ -1,21 +1,20 @@
-import { GET_REGIS ,GET_REGIS_GOOGLE} from "../action/loginAction";
-import { GET_LOGIN,GET_LOGIN_GOOGLE } from "../action/loginAction";
+import { GET_LIST_PRODUCT } from "../action/productAction";
 
 const innitialState ={
-    getRegis : false,
-    getRegisLoading : false,
-    getRegisError : false,
+    getProduct : false,
+    getProductLoading : false,
+    getProductError : false,
 
 }
 
 const job = (state = innitialState, action) =>{
     switch (action.type) {
-        case GET_REGIS :
+        case GET_LIST_PRODUCT :
             return {
                 ...state,
-                getRegis : action.payload.data,
-                getRegisLoading : action.payload.loading,
-                getRegisError : action.payload.errorMassage
+                getProduct : action.payload.data,
+                getProductLoading : action.payload.loading,
+                getProductError : action.payload.errorMassage
 
             }
         default:
