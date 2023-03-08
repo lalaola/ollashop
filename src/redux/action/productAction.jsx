@@ -1,10 +1,77 @@
+import { useSelector } from "react-redux"
 import { api } from "../../config"
 
 export const GET_LIST_PRODUCT = 'GET_LIST_PRODUCT'
 export const GET_DETAIL_PRODUCT = 'GET_DETAIL_PRODUCT'
+export const GET_PRODUCT_BARU = 'GET_PRODUCT_BARU'
 export const SEARCH_KEY = 'SEARCH_KEY'
 
 
+export const fatchDataProductBaru = () => {
+    return (dispatch) => {
+        console.log('2. loading masuk action')
+        dispatch({
+            type: GET_PRODUCT_BARU,
+            payload: {
+                loading: true,
+                data: false,
+                errorMassage: false
+            }
+        })
+        // fetching data api
+        api
+            .get("products", {
+                page: 2,
+                per_page: 5,
+            })
+            .then((response) => {
+                if (response.status === 200) {
+                    const data = response.data
+                    dispatch({
+                        type: GET_PRODUCT_BARU,
+                        payload: {
+                            loading: false,
+                            data: data,
+                            errorMassage: false
+                        }
+                    })
+                }
+            })
+    }
+}
+// export const fatchDataProductBaru = () => {
+//     return (dispatch) => {
+//         console.log('2. loading masuk action')
+//         dispatch({
+//             type: GET_PRODUCT_BARU,
+//             payload: {
+//                 loading: true,
+//                 data: false,
+//                 errorMassage: false
+//             }
+//         })
+//         // fetching data api
+//         api
+//             .get("products", {
+//                 per_page: 5,
+//             })
+//             .then((response) => {
+//                 if (response.status === 200) {
+//                     const data = response.data
+//                     dispatch({
+//                         type: GET_LIST_PRODUCT,
+//                         payload: {
+//                             loading: false,
+//                             data: response.data,
+//                             errorMassage: false
+//                         }
+//                     })
+//                 }
+//             })
+//             .catch((error) => { });
+
+//     }
+// }
 export const fatchDataProduct = () => {
     return (dispatch) => {
         console.log('2. loading masuk action')
@@ -17,8 +84,10 @@ export const fatchDataProduct = () => {
             }
         })
         // fetching data api
-         api
-            .get("products")
+        api
+            .get("products", {
+                per_page: 5,
+            })
             .then((response) => {
                 if (response.status === 200) {
                     const data = response.data
@@ -30,12 +99,10 @@ export const fatchDataProduct = () => {
                             errorMassage: false
                         }
                     })
-                    console.log("data: ", data)
-                  
                 }
             })
             .catch((error) => { });
-            
+
     }
 }
 export const detailProduct = (id) => {
@@ -50,7 +117,7 @@ export const detailProduct = (id) => {
             }
         })
         // fetching data api
-         api
+        api
             .get(`products/${id}`)
             .then((response) => {
                 if (response.status === 200) {
@@ -62,11 +129,11 @@ export const detailProduct = (id) => {
                             data: response.data,
                             errorMassage: false
                         }
-                    })                  
+                    })
                 }
             })
             .catch((error) => { });
-            
+
     }
 }
 export const searchProduct = (keyword) => {

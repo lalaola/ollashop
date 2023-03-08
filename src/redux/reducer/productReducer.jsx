@@ -1,9 +1,13 @@
-import { GET_DETAIL_PRODUCT, GET_LIST_PRODUCT, SEARCH_KEY } from "../action/productAction";
+import { GET_DETAIL_PRODUCT, GET_LIST_PRODUCT, GET_PRODUCT_BARU, SEARCH_KEY } from "../action/productAction";
 
 const innitialState ={
     getProduct : false,
     getProductLoading : false,
     getProductError : false,
+   
+    getProductBaru : false,
+    getProductBaruLoading : false,
+    getProductBaruError : false,
     
     getProductDetail : false,
     getProductDetailLoading : false,
@@ -16,6 +20,14 @@ const innitialState ={
 
 const job = (state = innitialState, action) =>{
     switch (action.type) {
+        case GET_PRODUCT_BARU :
+            return {
+                ...state,
+                getProductBaru : action.payload.data,
+                getProductBaruLoading : action.payload.loading,
+                getProductBaruError : action.payload.errorMassage
+
+            }
         case GET_LIST_PRODUCT :
             return {
                 ...state,
@@ -32,7 +44,7 @@ const job = (state = innitialState, action) =>{
                 getProductDetailError : action.payload.errorMassage
                 
             }
-            case SEARCH_KEY :
+        case SEARCH_KEY :
                 return {
                     ...state,
                     keyWordCari : action.payload.data,
