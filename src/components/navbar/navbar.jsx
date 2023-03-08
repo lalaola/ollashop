@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../asset/image/logo.png'
+import logo from '../../asset/image/logo.png'
 const Navbar = () => {
     return (
         <div className='navbar col-10 mx-auto d-flex justify-content-between'>

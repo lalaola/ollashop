@@ -1,10 +1,10 @@
 import React from 'react';
 import Index from '../components/detailComponent';
-import Navbar from '../components/navbar';
+import Navbar from '../components/navbar/navbar';
 
 const DetailProduct = () => {
     return (
-        <div>
+        <div className='detail'>
             <Navbar/>
             <Index/>
         </div>

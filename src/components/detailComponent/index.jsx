@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { detailProduct } from '../../redux/action/productAction';
 import parse from 'html-react-parser'
+import Card from './card';
+import Breadcumbs from './breadcrumb';
+import { motion } from 'framer-motion';
 
 
 const Index = () => {
@@ -17,22 +20,17 @@ const Index = () => {
     }, [dispatch]);
 
     return (
-        <div className='mt-4 container'>
+        <motion.div
+        initial={{opacity : 0 }}
+        animate={{ opacity : 1}} className='mt-5 container'>
+            <Breadcumbs/>
             {
                 getProductDetail ?
-                    <div>
-                        <p>Nama Barang : {getProductDetail.name}</p>
-                        <p>Ini Detail Project : {parse(newDesc)} </p>
-                        <p>harga barang: {getProductDetail.price}</p>
-                        <p>sku : {getProductDetail.sku}</p>
-                        <div className="col-4">
-                            <img className='img-fluid' src={getProductDetail.images[0].src} alt="" />
-                        </div>
-                    </div>
+                <Card descrption={parse(newDesc)} sku=  {getProductDetail.price} name= {getProductDetail.name} image={getProductDetail.images[0].src}  price={getProductDetail.price}/>
                     : getProductDetailLoading ? 'loading...' : 'salah'
             }
 
-        </div>
+        </motion.div>
     );
 }
 

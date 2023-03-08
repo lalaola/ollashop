@@ -22,7 +22,7 @@ export const fatchDataProductBaru = () => {
         api
             .get("products", {
                 page: 2,
-                per_page: 5,
+                per_page: 8,
             })
             .then((response) => {
                 if (response.status === 200) {
@@ -39,39 +39,6 @@ export const fatchDataProductBaru = () => {
             })
     }
 }
-// export const fatchDataProductBaru = () => {
-//     return (dispatch) => {
-//         console.log('2. loading masuk action')
-//         dispatch({
-//             type: GET_PRODUCT_BARU,
-//             payload: {
-//                 loading: true,
-//                 data: false,
-//                 errorMassage: false
-//             }
-//         })
-//         // fetching data api
-//         api
-//             .get("products", {
-//                 per_page: 5,
-//             })
-//             .then((response) => {
-//                 if (response.status === 200) {
-//                     const data = response.data
-//                     dispatch({
-//                         type: GET_LIST_PRODUCT,
-//                         payload: {
-//                             loading: false,
-//                             data: response.data,
-//                             errorMassage: false
-//                         }
-//                     })
-//                 }
-//             })
-//             .catch((error) => { });
-
-//     }
-// }
 export const fatchDataProduct = () => {
     return (dispatch) => {
         console.log('2. loading masuk action')
@@ -86,7 +53,7 @@ export const fatchDataProduct = () => {
         // fetching data api
         api
             .get("products", {
-                per_page: 5,
+                per_page: 8,
             })
             .then((response) => {
                 if (response.status === 200) {
