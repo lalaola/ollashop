@@ -1,10 +1,10 @@
 export const data = {
-    name: "Premium Quality",
+    name: "Tas Quality Guci",
     type: "simple",
     regular_price: "21.99",
-    description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+    description: "Tas Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
     short_description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-    sku : "ola-4",
+    sku : "tas-01",
     categories: [
       {
         id: 9
@@ -15,8 +15,7 @@ export const data = {
     ],
     images: [
       {
-        alt :  "product 1",
-        src: "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg"
+        src: "https://media.gucci.com/content/LightGray_CategorySingle_Standard_1200x1200/1678188630/CategorySingle_740834AAB1Q9022_001_Light.jpg"
       },
     ]
-  };
+  }

@@ -1,5 +1,4 @@
 import logo from '../logo.svg';
-import '../App.css';
 import { useEffect, useState } from 'react';
 import { fatchDataProduct } from '../redux/action/productAction';
 import { useDispatch, useSelector } from 'react-redux';

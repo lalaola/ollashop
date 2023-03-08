@@ -1,9 +1,16 @@
-import { GET_LIST_PRODUCT } from "../action/productAction";
+import { GET_DETAIL_PRODUCT, GET_LIST_PRODUCT, SEARCH_KEY } from "../action/productAction";
 
 const innitialState ={
     getProduct : false,
     getProductLoading : false,
     getProductError : false,
+    
+    getProductDetail : false,
+    getProductDetailLoading : false,
+    getProductDetailError : false,
+
+    keyWordCari : '',
+    keyWordCariLoading : false,
 
 }
 
@@ -16,6 +23,20 @@ const job = (state = innitialState, action) =>{
                 getProductLoading : action.payload.loading,
                 getProductError : action.payload.errorMassage
 
+            }
+        case GET_DETAIL_PRODUCT :
+            return {
+                ...state,
+                getProductDetail : action.payload.data,
+                getProductDetailLoading : action.payload.loading,
+                getProductDetailError : action.payload.errorMassage
+                
+            }
+            case SEARCH_KEY :
+                return {
+                    ...state,
+                    keyWordCari : action.payload.data,
+                    keyWordCariLoading : action.payload.loading,
             }
         default:
             return state;

@@ -59,6 +59,8 @@
 .product .card.mb-3.mx-1 {
   width: 24%;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 .product .text {
   color: white;
