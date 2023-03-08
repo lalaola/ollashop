@@ -7,6 +7,9 @@
 .homepage .hero {
   overflow: hidden;
 }
+.homepage .hero .hero-image {
+  animation: hero 3000ms infinite alternate linear;
+}
 .homepage .hero .text h3 {
   font-weight: 700;
   font-size: 36px;
@@ -40,6 +43,14 @@
   }
   .homepage .hero .text p {
     font-size: 20px;
+  }
+}
+@keyframes hero {
+  from {
+    transform: translateY(-1rem);
+  }
+  to {
+    transform: translateY(1.5rem);
   }
 }
 .navbar .menu a {

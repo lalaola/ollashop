@@ -4,6 +4,10 @@
 
     .hero { 
         overflow: hidden;
+        .hero-image{
+            animation: hero 3000ms infinite alternate linear;
+
+        }
        .text {
             h3 {
                 font-weight: 700;
@@ -49,3 +53,12 @@
         }
     }
 }
+@keyframes hero {
+    from {
+      transform: translateY(-1rem)
+    }
+  
+    to {
+      transform: translateY(1.5rem)
+    }
+  }
