@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux"
 import { api } from "../../config"
 
 export const GET_LIST_PRODUCT = 'GET_LIST_PRODUCT'

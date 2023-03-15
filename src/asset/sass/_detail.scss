@@ -1,4 +1,6 @@
 .detail{
+    position: relative;
+    background-color: #2B2B2b;
     .card{
         .card-desc{
             p{
@@ -13,4 +15,10 @@
         }
     }
 
+}
+
+@media only screen and (max-width: 768px) {
+    .breadcrumb{
+        justify-content: center;
+    }
 }

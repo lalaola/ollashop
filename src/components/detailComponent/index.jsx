@@ -22,7 +22,7 @@ const Index = () => {
     return (
         <motion.div
         initial={{opacity : 0 }}
-        animate={{ opacity : 1}} className='mt-5 container'>
+        animate={{ opacity : 1}} className='mt-3 container'>
             <Breadcumbs/>
             {
                 getProductDetail ?

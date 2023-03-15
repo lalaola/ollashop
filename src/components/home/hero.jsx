@@ -28,12 +28,6 @@ const
                     <HomeSwipper />
 
                     <h1 className='bg-text'>Olla Shop</h1>
-                    {/* <div className="hero-image col-6 col-md-5 d-flex align-items-center flex-column ">
-                    <img className='img-fluid' src={foto} alt="hero" />
-                <h3>Guci bag Limited edition sasion 1</h3>
-                <button className='btn btn-warning'>Buy Now</button>
-
-                </div> */}
                 </div>
             </div>
         );

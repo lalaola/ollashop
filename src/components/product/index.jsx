@@ -7,7 +7,6 @@ const Index = () => {
     return (
         <div className='product'>
             <Hero/>
-
             <Promo/>
             <Listproduct/>
         </div>

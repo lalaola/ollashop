@@ -1,3 +1,4 @@
+import { GET_ORDER } from "../../components/detailComponent/card";
 import { GET_DETAIL_PRODUCT, GET_LIST_PRODUCT, GET_PRODUCT_BARU, SEARCH_KEY } from "../action/productAction";
 
 const innitialState ={
@@ -16,10 +17,17 @@ const innitialState ={
     keyWordCari : '',
     keyWordCariLoading : false,
 
+    order : false,
+
 }
 
 const job = (state = innitialState, action) =>{
     switch (action.type) {
+        case GET_ORDER :
+            return {
+                ...state,
+                order : action.payload.data,
+            }
         case GET_PRODUCT_BARU :
             return {
                 ...state,

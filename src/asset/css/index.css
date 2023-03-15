@@ -237,6 +237,10 @@ swiper-container {
   background: #E78A00;
 }
 
+.detail {
+  position: relative;
+  background-color: #2B2B2b;
+}
 .detail .card .card-desc p {
   font-size: 18px;
   padding: 0.3rem;
@@ -245,4 +249,53 @@ swiper-container {
 .detail .card .card-desc h3 {
   border: 1px solid black;
   padding: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .breadcrumb {
+    justify-content: center;
+  }
+}
+.tool {
+  position: relative;
+  display: inline-block;
+}
+.tool .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 91;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tool .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  z-index: 99;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.tool:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.order {
+  position: absolute;
+  background-color: black;
+  width: 20vw;
+  top: 0;
+  bottom: 0;
 }/*# sourceMappingURL=index.css.map */

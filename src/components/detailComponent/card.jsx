@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Swal from 'sweetalert2'
+
+export const GET_ORDER = 'GET_ORDER'
 
 const Card = (props) => {
+    const handleOrder = () =>{
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          Toast.fire({
+            icon: 'success',
+            title: 'Pesanan Diterima'
+          })    
+    }
     return (
-        <div class="card mt-5" >
+        <div class="card mt-2" >
             <div class="row g-0">
                 <div class="col-md-5">
                     <img src={props.image} class="img-fluid rounded-start" alt="..." />
@@ -16,7 +37,7 @@ const Card = (props) => {
                             <h3 >Detail Product</h3>
                             {props.descrption}
                         </div>
-                        <button disabled className='btn btn-danger'>Cheack Out</button>
+                        <button onClick={handleOrder} className='btn btn-danger'>Cheack Out</button>
                     </div>
                 </div>
             </div>
