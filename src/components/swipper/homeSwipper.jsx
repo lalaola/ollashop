@@ -1,5 +1,5 @@
 // import Swiper core and required modules
-import { Navigation, Pagination, A11y } from 'swiper';
+import { Autoplay, Pagination, A11y } from 'swiper';
 import foto from '../../asset/image/home/gc.png'
 import Kalung from '../../asset/image/home/kalung.png'
 import sepatu from '../../asset/image/home/sepatu.png'
@@ -18,7 +18,11 @@ export default () => {
 
   return (
     <Swiper
-      modules={[Pagination, A11y]}
+      autoplay={{
+        delay: 2000,
+        disableOnInteraction: false,
+      }}
+      modules={[Pagination, A11y,Autoplay]}
       slidesPerView={1}
       pagination={{ clickable: true }}
     >
@@ -48,7 +52,7 @@ export default () => {
 
         </div>
       </SwiperSlide>
-      
+
 
     </Swiper>
   );
