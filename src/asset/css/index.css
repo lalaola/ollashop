@@ -2,13 +2,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Lateef:wght@200&display=swap");
 .homepage {
   min-height: 100vh;
-  background: linear-gradient(269.28deg, #ABEBFF 0.64%, rgba(184, 251, 255, 0.91) 31.05%, #FDFFFF 72.58%);
+  background: #2B2B2B;
+}
+.homepage span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: orange;
+}
+.homepage .ornamen {
+  position: absolute;
+  height: 50%;
+  right: 0;
+  left: 0;
+  top: 20%;
+  display: flex;
+}
+.homepage .ornamen .col-kedua {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  flex-direction: column;
+}
+.homepage .ornamen .col-abu {
+  width: 223px;
+  height: 13px;
+  background: #4C4C4C;
+  border-radius: 8px;
+}
+.homepage .ornamen .abu-kecil {
+  width: 46px;
+  height: 13px;
+  background: #4D4D4D;
+  border-radius: 8px;
+}
+.homepage .ornamen .col-orange {
+  width: 123px;
+  height: 13px;
+  background: #E78A00;
+  border-radius: 8px;
+}
+.homepage .bg-text {
+  position: absolute;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 180px;
+  line-height: 211px;
+  color: #E78A00;
+  mix-blend-mode: normal;
+  opacity: 0.05;
 }
 .homepage .hero {
   overflow: hidden;
+  position: relative;
 }
-.homepage .hero .hero-image {
-  animation: hero 3000ms infinite alternate linear;
+.homepage .hero h4.text-white {
+  letter-spacing: 0.01em;
+  font-size: 26px;
+  text-shadow: 0px 3px 4px rgba(255, 255, 255, 0.56);
+}
+.homepage .hero .btn {
+  border-radius: 45px;
 }
 .homepage .hero .text h3 {
   font-weight: 700;
@@ -30,36 +82,47 @@
   letter-spacing: 0.03em;
 }
 
-@media only screen and (max-width: 968px) {
+@media only screen and (max-width: 558px) {
   .homepage .hero {
+    margin-top: 5rem !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .homepage .hero {
+    margin-top: 3rem;
+  }
+  .homepage .hero h4.text-white {
     margin-top: 1rem;
-    flex-direction: column-reverse;
   }
-  .homepage .hero .text h1 {
-    font-size: 48px;
-  }
-  .homepage .hero .text h3 {
-    font-size: 30px;
-  }
-  .homepage .hero .text p {
-    font-size: 20px;
+  .homepage .hero .btn {
+    margin-top: 1rem;
   }
 }
-@keyframes hero {
-  from {
-    transform: translateY(-1rem);
-  }
-  to {
-    transform: translateY(1.5rem);
-  }
+.swiper-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
+
+.swiper,
+swiper-container {
+  padding-bottom: 2rem !important;
+}
+
 .navbar .menu a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: 600;
+}
+.navbar .btn {
+  border: 1px solid white;
+  border-radius: 24px;
 }
 
 @media only screen and (max-width: 968px) {
+  .navbar {
+    flex-direction: column;
+  }
   .navbar .menu a {
     font-size: 14px;
     font-weight: 400;

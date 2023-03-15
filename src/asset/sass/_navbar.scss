@@ -1,13 +1,18 @@
 .navbar {
     .menu a {
         text-decoration: none;
-        color: black;
+        color: white;
         font-weight: 600;
+    }
+    .btn{
+        border: 1px solid white;
+        border-radius: 24px;
     }
 }
 
 @media only screen and (max-width: 968px) {
     .navbar {
+        flex-direction: column;
         .menu a {
             font-size: 14px;
             font-weight: 400;
