@@ -1,6 +1,6 @@
 // import Swiper core and required modules
 import { Navigation, Pagination, A11y } from 'swiper';
-import foto from '../../asset/image/home/guci.png'
+import foto from '../../asset/image/home/gc.png'
 import Kalung from '../../asset/image/home/kalung.png'
 import sepatu from '../../asset/image/home/sepatu.png'
 import { BagHeart } from 'react-bootstrap-icons';
@@ -23,7 +23,7 @@ export default () => {
       pagination={{ clickable: true }}
     >
       <SwiperSlide>
-        <div className="hero-image col-12 col-sm-10 col-md-4 d-flex align-items-center flex-column ">
+        <div className="hero-image col-12 col-sm-10 col-md-3 d-flex align-items-center flex-column ">
           <img className='img-fluid' src={foto} alt="hero" />
           <h4 className='text-white text-center'>Guci bag Limited edition sasion 1</h4>
           <NavLink to="product/detail/343" className='btn btn-warning my-1 px-4'>Buy Now <BagHeart /> </NavLink>
