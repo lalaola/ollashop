@@ -9,8 +9,10 @@ const Card = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{props.title}</h5>
                     <p>SKU {props.sku}</p>
-                    { parse(props.shortDesc)}
-                    <p>Price {props.price}</p>
+                    <div className="beli d-flex justify-content-between">
+                    <p>Price {props.price} </p>
+                    <p>Beli</p>
+                    </div>
                 </div>
         </NavLink>
     );

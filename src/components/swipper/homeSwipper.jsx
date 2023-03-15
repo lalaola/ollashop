@@ -18,13 +18,12 @@ export default () => {
       modules={[ Pagination, A11y]}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      className="mySwiper"
     >
       <SwiperSlide>
-        <div className="hero-image col-12 col-sm-10 col-md-5 d-flex align-items-center flex-column ">
+        <div className="hero-image col-12 col-sm-10 col-md-4 d-flex align-items-center flex-column ">
                     <img className='img-fluid' src={foto} alt="hero" />
                 <h4 className='text-white text-center'>Guci bag Limited edition sasion 1</h4>
-                <button className='btn btn-warning'>Buy Now <BagHeart/> </button>
+                <button className='btn btn-warning my-1 px-4'>Buy Now <BagHeart/> </button>
 
         </div>
       </SwiperSlide>

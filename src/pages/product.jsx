@@ -4,7 +4,7 @@ import Index from '../components/product';
 
 const Product = () => {
     return (
-        <div>
+        <div className='bg-dark'>
             <Navbar/>
             <Index/>
         </div>

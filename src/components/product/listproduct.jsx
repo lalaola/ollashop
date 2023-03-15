@@ -27,12 +27,12 @@ const Listproduct = () => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }} className='list-product col-10 mx-auto mt-4'>
-            <h3>Product for you !</h3>
+            <h3 className='text-white'>Product for you !</h3>
             <div className="wrap-product mt-4 d-flex flex-wrap ">
                 {
                     newProduct ? newProduct.filter(product => product.name.toLowerCase().includes(keyWordCari) || product.sku.toLowerCase().includes(keyWordCari)).map((product, index) => {
                         return (
-                            <Card shortDesc={product.short_description} sku={product.sku} image={product.images[0].src} id={product.id} key={index} title={product.name} price={product.price} />
+                            <Card  sku={product.sku} image={product.images[0].src} id={product.id} key={index} title={product.name} price={product.price} />
                         );
                     })
                         : getProductLoading ? <p>Loading</p> : ''
