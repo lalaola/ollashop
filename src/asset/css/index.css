@@ -241,6 +241,13 @@ swiper-container {
   position: relative;
   background-color: #2B2B2b;
 }
+.detail .card .detail-img {
+  width: 350px;
+}
+.detail .card .detail-img img {
+  object-fit: cover;
+  width: 100%;
+}
 .detail .card .card-desc p {
   font-size: 18px;
   padding: 0.3rem;

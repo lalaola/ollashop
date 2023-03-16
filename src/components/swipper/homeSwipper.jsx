@@ -19,7 +19,7 @@ export default () => {
   return (
     <Swiper
       autoplay={{
-        delay: 2000,
+        delay: 2500,
         disableOnInteraction: false,
       }}
       modules={[Pagination, A11y,Autoplay]}

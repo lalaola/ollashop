@@ -25,8 +25,8 @@ const Card = (props) => {
     return (
         <div class="card mt-2" >
             <div class="row g-0">
-                <div class="col-md-5">
-                    <img src={props.image} class="img-fluid rounded-start" alt="..." />
+                <div class="col-md-5 mx-auto detail-img">
+                    <img src={props.image} class="rounded-start" alt="..." />
                 </div>
                 <div class="col-md-7  ps-5 d-flex align-items-center">
                     <div class="card-body">
